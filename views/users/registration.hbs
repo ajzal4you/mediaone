@@ -1,0 +1,50 @@
+
+    <div class="form-body without-side">
+        <div class="stuck">
+            <img style="width: 80px; margin-right: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Media_One_Logo.png" alt="">
+            <img style="width: 80px;" height="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRID6tgUgFH6AWfwSV58sskwlVPXaVmGcGB9dKabVl2sg&s" alt="">
+            <img style="width: 80px; margin-left: 10px;" src="" alt="">
+        </div><br><br>
+        <div class="row">
+            <div class="img-holder">
+                <div class="bg"></div>
+                <div class="info-holder">
+                    <img src="images/graphic3.svg" alt="">
+                </div>
+            </div>
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <span><h4 style="color: white; margin-bottom: 30px; font-weight: bold;">INTERNATIONAL EDUCATIONAL FESTIVAL</h4>
+                        <p><font color="red">{{#if signInErr}}{{signInErr}}!{{/if}}</font></p>
+                        <form action="/registration" method="POST">
+                            <input class="form-control" id="name" type="text" name="name" placeholder="Full name"
+                                required>
+                            <input class="form-control" id="phone" type="phone" name="Phone"
+                                placeholder="Phone" required>
+                            <input class="form-control" id="email" type="email" name="email"
+                                placeholder="Email address" required>                               
+                            <input class="form-control" id="adderss" type="Adderss" name="Address" placeholder="Adderss"
+                                required>
+
+                            <div class="form-button">
+                                <button id="submit" type="submit" class="ibtn" width="100%">Register</button>
+                                <p>2022 © All rights reserved | Design by <a target="_blank" href="https://www.vectorcrop.com/">VectorCrop</a>.</p>
+                               
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+</body>
+
+</html>
+
+                        
