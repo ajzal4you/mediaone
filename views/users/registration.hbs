@@ -3,7 +3,7 @@
         <div class="stuck">
             <img style="width: 80px; margin-right: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Media_One_Logo.png" alt="">
             <img style="width: 80px;" height="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRID6tgUgFH6AWfwSV58sskwlVPXaVmGcGB9dKabVl2sg&s" alt="">
-            <img style="width: 80px; margin-left: 10px;" src="" alt="">
+            <img style="margin-left:13px;width: 80px;" height="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQle5cMrsNt8V9kwH2Z_35k0XQEzDUUI9aqkTYCqITdtw&s" alt="">
         </div><br><br>
         <div class="row">
             <div class="img-holder">
@@ -18,13 +18,30 @@
                         <span><h4 style="color: white; margin-bottom: 30px; font-weight: bold;">INTERNATIONAL EDUCATIONAL FESTIVAL</h4>
                         <p><font color="red">{{#if signInErr}}{{signInErr}}!{{/if}}</font></p>
                         <form action="/registration" method="POST">
-                            <input class="form-control" id="name" type="text" name="name" placeholder="Full name"
-                                required>
+
+ <select class="form-control" id="usertype" name="usertype" required>
+    <option value="none">Select Visitor Type</option>
+    <option value="Manufactorer">Manufactorer</option>
+    <option value="Trader">Trader</option>
+    <option value="Fabricator">Fabricator</option>
+    <option value="Contractor">Contractor</option>
+    <option value="Architects">Architects</option>
+    <option value="Engineers">Engineers</option>
+    <option value="General Public">General Public</option>
+    <option value="Interior Designer">Interior Designer</option>
+
+
+  </select>
+                            <input class="form-control" id="name" type="text" name="name" placeholder="Full name" required>
+
+
                             <input class="form-control" id="phone" type="phone" name="Phone"
                                 placeholder="Phone" required>
                             <input class="form-control" id="email" type="email" name="email"
-                                placeholder="Email address" required>                               
-                            <input class="form-control" id="adderss" type="Adderss" name="Address" placeholder="Adderss"
+                                placeholder="Email address" required>  
+                                <input class="form-control" id="cname" type="text" name="cname" placeholder="Company Name" required> 
+                                <input class="form-control" id="place" type="text" name="place" placeholder="Place" required>                            
+                            <input class="form-control" id="district" type="text" name="district" placeholder="District"
                                 required>
 
                             <div class="form-button">

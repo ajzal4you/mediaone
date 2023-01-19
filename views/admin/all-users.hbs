@@ -18,10 +18,13 @@
                 <thead class="table-dark">
                     <tr>
                         <th scope="col">No.</th>
+                        <th scope="col">User Type</th>
                         <th scope="col">Name</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Email</th>
-                         <th scope="col">Address</th>
+                        <th scope="col">Company</th>
+                         <th scope="col">Place</th>
+                         <th scope="col">District</th>
                         <th scope="col">Remove</th>
                     </tr>
                 </thead>
@@ -29,10 +32,13 @@
                     {{#each users}}
                     <tr class="align-middle">
                         <th scope="row">{{incremented @index}}</th>
+                        <td>{{this.usertype}}</td>
                         <td>{{this.name}}</td>
                         <td>{{this.Phone}}</td>
                         <td>{{this.email}}</td>
-                        <td>{{this.Address}}</td>
+                         <td>{{this.cname}}</td>
+                         <td>{{this.place}}</td>
+                        <td>{{this.district}}</td>
                         <td><a href="/admin/remove-user/{{this._id}}" class="btn btn-danger" onclick="return confirm('Are You Sure to Delete {{this.name}} ?')">Remove</a></td>
                     </tr>
                     {{/each}}
