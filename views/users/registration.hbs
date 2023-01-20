@@ -42,8 +42,24 @@
                                 placeholder="Email address" required>  
                                 <input class="form-control" id="cname" type="text" name="cname" placeholder="Company Name" required> 
                                 <input class="form-control" id="place" type="text" name="place" placeholder="Place" required>                            
-                            <input class="form-control" id="district" type="text" name="district" placeholder="District"
-                                required>
+ <select class="form-control" id="usertype" name="usertype" required>
+    <option value="none">Select District</option>
+    <option value="Kasarkod">Kasarkod</option>
+    <option value="Kannur">Kannur</option>
+    <option value="Kozhikode">Kozhikode</option>
+    <option value="Wayanad">Wayanad</option>
+    <option value="Malappuram">Malappuram</option>
+    <option value="Palakkad">Palakkad</option>
+    <option value="Thrissur">Thrissur</option>
+    <option value="Ernakulam">Eranakualam</option>
+        <option value="Idukki">Idukki</option>
+            <option value="Kottayam">Kottayam</option>
+                <option value="Alapuzha">Alapuzha</option>
+                    <option value="Pathanamthitta">Pathanamthitta</option>
+                        <option value="Kollam">Kollam</option>
+                            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                            <option value="Other">Other</option>
+  </select>
 
                             <div class="form-button">
                                 <button id="submit" type="submit" class="ibtn" width="100%">Register</button>
