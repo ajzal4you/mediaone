@@ -1,82 +1,77 @@
-
-    <div class="form-body without-side">
-        <div class="stuck">
-        {{!--    <img style="width: 80px; margin-right: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Media_One_Logo.png" alt="">
-            <img style="width: 80px;" height="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRID6tgUgFH6AWfwSV58sskwlVPXaVmGcGB9dKabVl2sg&s" alt="">  --}}
-            <img style="width: 100px; height: 100px; border-radius: 15px;" src="images/ALCA.jpg" alt="">
-            <img style="width: 100px; height: 100px; border-radius: 15px;" src="images/EXPO.jpg" alt="">
-
-             <br> <br>
-        </div><br><br>
-        <div class="row">
-            <div class="img-holder">
-                <div class="bg"></div>
-                <div class="info-holder">
-                    <img src="images/graphic3.svg" alt="">
-                </div>
+<div class="form-body without-side">
+    <div class="stuck">
+   {{!--<img style="width: 80px; margin-right: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Media_One_Logo.png" alt="">
+        <img style="width: 80px;" height="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRID6tgUgFH6AWfwSV58sskwlVPXaVmGcGB9dKabVl2sg&s" alt="">  --}}
+        <img style="width: 100px; height: 100px; border-radius: 15px; margin-right: 20px;" src="images/ALCA.jpg" alt="" />
+        <img style="width: 100px; height: 100px; border-radius: 15px;" src="images/EXPO.jpg" alt="" />
+        <br />
+        <br />
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="img-holder">
+            <div class="bg"></div>
+            <div class="info-holder">
+                <img src="images/graphic3.svg" alt="" />
             </div>
-            <div class="form-holder">
-                <div class="form-content">
-                    <div class="form-items">
-                    {{!--    <span><h4 style="color: white; margin-bottom: 30px; font-weight: bold;">INTERNATIONAL EDUCATIONAL FESTIVAL</h4> --}}
-                        <p><font color="red">{{#if signInErr}}{{signInErr}}!{{/if}}</font></p>
-                        <form action="/registration" method="POST">
+        </div>
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+              {{!-- <span><h4 style="color: white; margin-bottom: 30px; font-weight: bold;">INTERNATIONAL EDUCATIONAL FESTIVAL</h4> --}}
+                    <p><font color="red">{{#if signInErr}}{{signInErr}}!{{/if}}</font></p>
+                    <form action="/registration" method="POST">
+                        <select class="form-control" id="usertype" name="usertype" required>
+                            <option value="none">Select Visitor Type</option>
+                            <option value="Manufacturer">Manufacturer</option>
+                            <option value="Trader">Trader</option>
+                            <option value="Fabricator">Fabricator</option>
+                            <option value="Contractor">Contractor</option>
+                            <option value="Architects">Architects</option>
+                            <option value="Engineers">Engineers</option>
+                            <option value="Interior Designer">Interior Designer</option>
+                            <option value="General Public">General Public</option>
+                        </select>
+                        <input class="form-control" id="name" type="text" name="name" placeholder="Full name" required />
 
- <select class="form-control" id="usertype" name="usertype" required>
-    <option value="none">Select Visitor Type</option>
-    <option value="Manufacturer">Manufacturer</option>
-    <option value="Trader">Trader</option>
-    <option value="Fabricator">Fabricator</option>
-    <option value="Contractor">Contractor</option>
-    <option value="Architects">Architects</option>
-    <option value="Engineers">Engineers</option>
-    <option value="Interior Designer">Interior Designer</option>
-    <option value="General Public">General Public</option>
-  </select>
-                            <input class="form-control" id="name" type="text" name="name" placeholder="Full name" required>
+                        <dir style="display: flex; width: 100%; padding: 0; margin: 0;">
+                            <input type="text" value="+91" style="width: 50px; padding: 0; text-align: center;" class="form-control" />
+                            <input class="form-control" id="phone" type="phone" name="Phone" placeholder="Phone" required maxlength="10" style="width: 100%; margin-left: 5px;" />
+                        </dir>
+                        <input class="form-control" id="email" type="email" name="email" placeholder="Email address" required />
+                        <input class="form-control" id="cname" type="text" name="cname" placeholder="Company Name" required />
+                        <input class="form-control" id="place" type="text" name="place" placeholder="Place" required />
+                        <select class="form-control" id="usertype" name="district" required>
+                            <option value="none">Select District</option>
+                            <option value="Kasarkod">Kasarkod</option>
+                            <option value="Kannur">Kannur</option>
+                            <option value="Kozhikode">Kozhikode</option>
+                            <option value="Wayanad">Wayanad</option>
+                            <option value="Malappuram">Malappuram</option>
+                            <option value="Palakkad">Palakkad</option>
+                            <option value="Thrissur">Thrissur</option>
+                            <option value="Ernakulam">Eranakualam</option>
+                            <option value="Idukki">Idukki</option>
+                            <option value="Kottayam">Kottayam</option>
+                            <option value="Alapuzha">Alapuzha</option>
+                            <option value="Pathanamthitta">Pathanamthitta</option>
+                            <option value="Kollam">Kollam</option>
+                            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                            <option value="Other">Other</option>
+                        </select>
 
-
-                            <input class="form-control" id="phone" type="phone" name="Phone"
-                                placeholder="Phone" required maxlength="10" defaultValue="+91" >
-                            <input class="form-control" id="email" type="email" name="email"
-                                placeholder="Email address" required>  
-                                <input class="form-control" id="cname" type="text" name="cname" placeholder="Company Name" required> 
-                                <input class="form-control" id="place" type="text" name="place" placeholder="Place" required>                            
- <select class="form-control" id="usertype" name="district" required>
-    <option value="none">Select District</option>
-    <option value="Kasarkod">Kasarkod</option>
-    <option value="Kannur">Kannur</option>
-    <option value="Kozhikode">Kozhikode</option>
-    <option value="Wayanad">Wayanad</option>
-    <option value="Malappuram">Malappuram</option>
-    <option value="Palakkad">Palakkad</option>
-    <option value="Thrissur">Thrissur</option>
-    <option value="Ernakulam">Eranakualam</option>
-    <option value="Idukki">Idukki</option>
-    <option value="Kottayam">Kottayam</option>
-    <option value="Alapuzha">Alapuzha</option>
-    <option value="Pathanamthitta">Pathanamthitta</option>
-    <option value="Kollam">Kollam</option>
-    <option value="Thiruvananthapuram">Thiruvananthapuram</option>
-    <option value="Other">Other</option>
-  </select>
-
-                            <div class="form-button">
-                                <button id="submit" type="submit" class="ibtn" width="100%">Register</button>
-                                <p>2022 © All rights reserved | Design by <a target="_blank" href="https://www.vectorcrop.com/">VectorCrop</a>.</p>
-                               
-                            </div>
-                        </form>
-
-                    </div>
+                        <div class="form-button">
+                            <button id="submit" type="submit" class="ibtn" width="100%">Register</button>
+                            <p>2022 © All rights reserved | Design by <a target="_blank" href="https://www.vectorcrop.com/">VectorCrop</a>.</p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-
-
-    
 </body>
 
 </html>
