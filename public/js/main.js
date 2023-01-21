@@ -10,3 +10,8 @@ $(window).on("load", function() {
         $(this).next().text(filename);
     });
 });
+
+function validate(form) {
+  if (form.usertype.value == null || form.usertype.value === "none") return false;
+  if (form.district.value == null || form.district.value === "none") return false;
+}
