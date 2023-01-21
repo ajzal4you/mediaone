@@ -23,7 +23,7 @@
                     <p><font color="red">{{#if signInErr}}{{signInErr}}!{{/if}}</font></p>
                     <form action="/registration" method="POST" onsubmit="return validate()">
                         <select class="form-control" id="usertype" name="usertype" required>
-                            <option value="none">Select Visitor Type</option>
+                  {{!--     <option value="none">Select Visitor Type</option> --}}
                             <option value="Manufacturer">Manufacturer</option>
                             <option value="Trader">Trader</option>
                             <option value="Fabricator">Fabricator</option>
@@ -43,7 +43,7 @@
                         <input class="form-control" id="cname" type="text" name="cname" placeholder="Company Name" required />
                         <input class="form-control" id="place" type="text" name="place" placeholder="Place" required />
                         <select class="form-control" id="usertype" name="district" required>
-                            <option value="none">Select District</option>
+                  {!--      <option value="none">Select District</option>    --}}
                             <option value="Kasarkod">Kasarkod</option>
                             <option value="Kannur">Kannur</option>
                             <option value="Kozhikode">Kozhikode</option>
