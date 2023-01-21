@@ -21,7 +21,7 @@
                 <div class="form-items">
               {{!-- <span><h4 style="color: white; margin-bottom: 30px; font-weight: bold;">INTERNATIONAL EDUCATIONAL FESTIVAL</h4> --}}
                     <p><font color="red">{{#if signInErr}}{{signInErr}}!{{/if}}</font></p>
-                    <form action="/registration" method="POST">
+                    <form action="/registration" method="POST" onsubmit="return validate()">
                         <select class="form-control" id="usertype" name="usertype" required>
                             <option value="none">Select Visitor Type</option>
                             <option value="Manufacturer">Manufacturer</option>
