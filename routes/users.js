@@ -41,6 +41,7 @@ router.get("/registration", function (req, res) {
 
 router.post("/registration", function (req, res) {
   req.body.Phone = "+91" + req.body.Phone;
+  req.body.createdAt = new Date();
   userHelper.doSignup(req.body).then((response) => {
     req.session.signedIn = true;
     req.session.user = response;
