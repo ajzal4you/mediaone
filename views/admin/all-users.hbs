@@ -40,7 +40,7 @@
                          <td>{{this.cname}}</td>
                          <td>{{this.place}}</td>
                         <td>{{this.district}}</td>
-                        <td>{{this.createdAt}}</td>
+                        <td>{{this.createdAt.toLocaleString()}}</td>
                         <td><a href="/admin/remove-user/{{this._id}}" class="btn btn-danger" onclick="return confirm('Are You Sure to Delete {{this.name}} ?')">Remove</a></td>
                     </tr>
                     {{/each}}
