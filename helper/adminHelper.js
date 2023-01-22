@@ -130,6 +130,7 @@ module.exports = {
         .get()
         .collection(collections.USERS_COLLECTION)
         .find()
+        .sort({ $natural:-1 })
         .toArray();
       resolve(users);
     });
